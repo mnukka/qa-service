@@ -1,0 +1,38 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'ee.company'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation group:'org.xerial', name:'sqlite-jdbc', version:'3.8.11.2'
+	implementation group:'org.modelmapper', name:'modelmapper', version:'2.3.0'
+	implementation group:'org.mybatis.spring.boot', name:'mybatis-spring-boot-starter', version:'2.1.1'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation group:'io.springfox', name:'springfox-swagger2', version:'2.9.2'
+	implementation group:'io.springfox', name:'springfox-swagger-ui', version:'2.9.2'
+
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}

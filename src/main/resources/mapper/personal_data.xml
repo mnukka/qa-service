@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ee.company.crm.persistence.customer.personal_data.PersonalDataDao">
+    <update id="updateCustomerMarketingConsent">
+        UPDATE test_data_preferences
+        SET marketing_consent = #{consent}
+        WHERE customer_id = #{customerId};
+    </update>
+
+    <select id="getConsentByCustomerId" parameterType="java.lang.Integer" resultType="ee.company.crm.persistence.customer.personal_data.PersonalDataEntity">
+        SELECT * from test_data_preferences where customer_id = #{customerId}
+    </select>
+</mapper>
