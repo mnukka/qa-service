@@ -1,7 +1,13 @@
 # Getting Started
-This is a simple spring boot application which enables of creating a customer and updating its marketing consent.
+This service is meant to be used as a dummy application for Quality Assurance.
 
-This application is meant as a service against which to implement a test task for Quality Assurance
+## Stack
+1) Java 8
+2) Spring boot
+
+## Features
+* application enables creating a customer
+* updating customers marketing consent
 
 ## Bugs introduced into the application
 1) customers can be created without any data validation
