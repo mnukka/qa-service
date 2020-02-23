@@ -4,6 +4,7 @@ This service is meant to be used as a dummy application for Quality Assurance.
 ## Stack
 1) Java 8
 2) Spring boot
+2) Mybatis with sqlite
 
 ## Features
 * application enables creating a customer
